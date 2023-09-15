@@ -1,2 +1,0 @@
-# EasyDram
-EasyDram"Credit Organisations"
