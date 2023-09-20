@@ -1,22 +1,42 @@
-import {StyleSheet, Text, View} from 'react-native';
+/**
+ * Author: By BrainForce
+ */
 
-const App = (): JSX.Element => {
+import React from 'react';
+
+import {SignUp} from './src/screens';
+import {createStackNavigator} from '@react-navigation/stack';
+import {NavigationContainer, DefaultTheme} from '@react-navigation/native';
+
+import Tabs from './src/navigation/tabs';
+
+const theme = {
+  ...DefaultTheme,
+  colors: {
+    ...DefaultTheme.colors,
+    border: 'transparent',
+  },
+};
+
+const Stack = createStackNavigator();
+
+const App = () => {
   return (
-    <View style={styles.container}>
-    
-    </View>
+    <NavigationContainer theme={theme}>
+      <Stack.Navigator
+        screenOptions={{
+          headerShown: false,
+        }}
+        initialRouteName={'SignUp'}>
+        <Stack.Screen name="SignUp" component={SignUp} />
+
+        {/* Tabs */}
+        <Stack.Screen name="HomeTabs" component={Tabs} />
+
+        {/* <Stack.Screen name="Scan" component={Scan} /> */}
+      </Stack.Navigator>
+    </NavigationContainer>
   );
 };
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-  greeting: {
-    fontSize: 35,
-    fontWeight: 'bold',
-  },
-});
 
 export default App;
