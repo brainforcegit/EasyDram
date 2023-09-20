@@ -1,9 +1,9 @@
-import LogoSmall from '../../assets/images/Logo200x64.png';
-import LogoMedium from '../../assets/images/Logo200x200.png';
-import LogoLarge from '../../assets/images/Logo400x400.png';
+const LogoSmall = require('../../assets/images/Logo200x64.png');
+const LogoMedium = require('../../assets/images/Logo200x200.png');
+const LogoLarge = require('../../assets/images/Logo400x400.png');
 
 export default {
-LogoSmall,
-LogoMedium,
-LogoLarge,
+  LogoSmall,
+  LogoMedium,
+  LogoLarge,
 };
